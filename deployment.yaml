@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: neopubl/test:1
+      - image: neopubl/test:2
         name: flaskdemo
         resources: {}
 status: {}
