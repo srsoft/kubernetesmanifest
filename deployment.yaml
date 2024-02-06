@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: flaskdemo
-  name: flaskdemo
+    app: examplenode
+  name: examplenode
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flaskdemo
+      app: examplenode
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: examplenode
     spec:
       containers:
-      - image: neopubl/test:3
-        name: flaskdemo
+      - image: neopubl/test:6
+        name: examplenode
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 5000
   selector:
-    app: flaskdemo
+    app: examplenode
