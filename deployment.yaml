@@ -18,7 +18,7 @@ spec:
         app: examplenode
     spec:
       containers:
-      - image: neopubl/test:7
+      - image: neopubl/test:8
         name: examplenode
         resources: {}
 status: {}
