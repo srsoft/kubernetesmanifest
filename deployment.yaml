@@ -18,34 +18,21 @@ spec:
         app: examplenode
     spec:
       containers:
-      - image: neopubl/test:6
+      - image: harbor.ks.io:8443/example/node:1
         name: examplenode
         resources: {}
 status: {}
 ---
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: lb-service
-#   labels:
-#     app: lb-service
-# spec:
-#   type: LoadBalancer
-#   ports:
-#   - port: 80
-#     targetPort: 5000
-#   selector:
-#     app: examplenode
 apiVersion: v1
 kind: Service
 metadata:
-  name: example-service
+  name: lb-service
   labels:
-    app: example-service
+    app: lb-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-  - port: 3030
-    targetPort: 5000
+  - port: 80
+    targetPort: 3000
   selector:
     app: examplenode
