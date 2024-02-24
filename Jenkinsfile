@@ -16,7 +16,7 @@ node {
                         sh "git config user.name srsoft"
                         sh "git switch harbor"
                         sh "cat deployment.yaml"
-                        sh "sed -i 's+harbor.ks.io:8443/example/node.*+harbor.ks.io:8443/example/node:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+harbor.ks.io:8443/ceresinventory/node.*+harbor.ks.io:8443/ceresinventory/node:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
