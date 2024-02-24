@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: examplenode
-  name: examplenode
+    app: ci-nuxt
+  name: ci-nuxt
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: examplenode
+      app: ci-nuxt
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: examplenode
+        app: ci-nuxt
     spec:
       containers:
-      - image: harbor.ks.io:8443/ceresinventory/node:20
-        name: examplenode
+      - image: harbor.ks.io:8443/ceresinventory/nuxt:20
+        name: ci-nuxt
         resources: {}
 status: {}
 ---
@@ -35,4 +35,4 @@ spec:
   - port: 80
     targetPort: 3000
   selector:
-    app: examplenode
+    app: ci-nuxt

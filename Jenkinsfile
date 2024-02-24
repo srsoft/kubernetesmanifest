@@ -14,13 +14,13 @@ node {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         sh "git config user.email neopubl@gmail.com"
                         sh "git config user.name srsoft"
-                        sh "git switch harbor"
+                        sh "git switch ceresinventory/nuxt"
                         sh "cat deployment.yaml"
-                        sh "sed -i 's+harbor.ks.io:8443/ceresinventory/node.*+harbor.ks.io:8443/ceresinventory/node:${DOCKERTAG}+g' deployment.yaml"
+                        sh "sed -i 's+harbor.ks.io:8443/ceresinventory/nuxt.*+harbor.ks.io:8443/ceresinventory/nuxt:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
-                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:harbor"
+                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:ceresinventory/nuxt"
       }
     }
   }
