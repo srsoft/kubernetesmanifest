@@ -18,7 +18,7 @@ spec:
         app: examplenode
     spec:
       containers:
-      - image: harbor.ks.io:8443/ceresinventory/node:20
+      - image: harbor.ks.io:8443/ceresinventory/node:28
         name: examplenode
         resources: {}
 status: {}
