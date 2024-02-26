@@ -13,7 +13,7 @@ spec:
         name: go
     spec:
       containers:
-      - image: harbor.ks.io:8443/ceresinventory/go:21
+      - image: harbor.ks.io:8443/ceresinventory/go:latest
         name: go-container
         ports:
         - containerPort: 3000
