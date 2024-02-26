@@ -15,6 +15,8 @@ node {
                         sh "git config user.email neopubl@gmail.com"
                         sh "git config user.name srsoft"
                         sh "git switch ceresinventory/go"
+                        sh "git config pull.rebase false"
+                        sh "git pull"                        
                         sh "cat deployment.yaml"
                         sh "sed -i 's+harbor.ks.io:8443/ceresinventory/go.*+harbor.ks.io:8443/ceresinventory/go:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
