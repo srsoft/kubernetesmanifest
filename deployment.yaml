@@ -18,7 +18,7 @@ spec:
         app: ci-nuxt
     spec:
       containers:
-      - image: harbor.ks.io:8443/ceresinventory/nuxt:7
+      - image: harbor.ks.io:8443/ceresinventory/nuxt:8
         name: ci-nuxt
         resources: {}
 status: {}
