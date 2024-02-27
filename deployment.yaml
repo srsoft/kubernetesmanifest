@@ -16,7 +16,7 @@ spec:
       - image: harbor.ks.io:8443/ceresinventory/go:27
         name: go-container
         ports:
-        - containerPort: 443
+        - containerPort: 3031
 ---
 apiVersion: v1
 kind: Service
@@ -26,6 +26,6 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 443
+    targetPort: 3031
   selector:
     name: go
