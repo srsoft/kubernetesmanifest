@@ -13,7 +13,7 @@ spec:
         name: nuxt
     spec:
       containers:
-      - image: harbor.ks.io:8443/ceresinventory/nuxt:31
+      - image: harbor.ks.io:8443/ceresinventory/nuxt:32
         name: nuxt-container
         ports:
         - containerPort: 3000
